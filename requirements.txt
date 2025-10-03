@@ -1,0 +1,5 @@
+datetime
+yfinance>=0.2.18
+pandas>=1.5.0
+requests>=2.28.0
+Flask>=3.1.2
