@@ -13,21 +13,22 @@ Notes:
 - Replace TELEGRAM_TOKEN and CHAT_ID with your own values before running.
 - This script uses yfinance (data is likely delayed ~1m); not suitable for high-frequency live execution.
 """
-
+import os
 import yfinance as yf
 import pandas as pd
 import requests
 import time
 from datetime import datetime
 
+
 # =====================
 # User configurable settings
 # =====================
 PAIR = "GC=F"  # XAUUSD symbol in yfinance
+TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
+CHAT_ID = os.getenv("CHAT_ID")
 ACCOUNT_BALANCE = 10000.0
 RISK_PER_TRADE = 0.01
-TELEGRAM_TOKEN = "8024228710:AAFNqvrzgn5k7uILXdLKd81vFZx4NrRFszs"
-CHAT_ID = "6601631486"
 BOT_ACTIVE = False
 LOOKBACK_H1 = "14d"
 LOOKBACK_5M = "5d"
